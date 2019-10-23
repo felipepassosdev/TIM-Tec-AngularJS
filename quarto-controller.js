@@ -1,3 +1,3 @@
 angular.module('aplicacao').controller('QuartoController', function($scope){
-    $scope.hide = false
+    $scope.hide = true
 })
