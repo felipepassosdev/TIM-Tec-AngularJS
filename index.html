@@ -43,6 +43,13 @@
             {{ aluno }}
         </li>
     </ul>
+    <div ng-controller="OitavoController">
+        <div class="card">
+            <div class="card-body">
+                <button class="btn btn-success" ng-class="{'btn btn-danger': !iniciado}" ng-click="mudar()">Meu botão</button>
+            </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="primeiro-controller.js"></script>
