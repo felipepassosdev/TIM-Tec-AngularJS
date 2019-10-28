@@ -38,6 +38,11 @@
     <div ng-controller="SextoController">
         <button class="btn btn-danger" ng-click="clicar()"> Clica ai</button>
     </div>
+    <ul>
+        <li ng-repeat="aluno in alunos">
+            {{ aluno }}
+        </li>
+    </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="primeiro-controller.js"></script>
