@@ -38,7 +38,7 @@
     <div ng-controller="SextoController">
         <button class="btn btn-danger" ng-click="clicar()"> Clica ai</button>
     </div>
-    <ul>
+    <ul ng-controller="SetimoController">
         <li ng-repeat="aluno in alunos">
             {{ aluno }}
         </li>
@@ -51,6 +51,7 @@
     <script src="quarto-controller.js"></script>
     <script src="quinto-controller.js"></script>
     <script src="sexto-controller.js"></script>
+    <script src="setimo-controller.js"></script>
 </body>
 
 </html>
