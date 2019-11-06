@@ -69,7 +69,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Endereço de email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Seu email" name="email" ng-model="email">
+                            placeholder="Seu email" name="email" ng-model="email" ng-readyonly="!iniciado">
                         <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                             ninguém.</small>
                     </div>
@@ -81,7 +81,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" ng-click="submeterLogin()">Enviar</button>
+                    <button type="submit" class="btn btn-primary" ng-click="submeterLogin()" ng-disabled="!iniciado" ng-minlength="9">Enviar</button>
                 </form>
             </div>
             <div class="offset-md-3"></div>
