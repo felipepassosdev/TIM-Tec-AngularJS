@@ -3,6 +3,10 @@ angular.module('aplicacao').controller('DecimoController', function($scope){
     $scope.iniciado = true
 
     $scope.submeterLogin = function() {
-        $scope.usuarios.push($scope.email)
+        if($scope.form_login.$valid){
+            $scope.usuarios.push($scope.email)
+        }else {
+
+        }
     }
 })
