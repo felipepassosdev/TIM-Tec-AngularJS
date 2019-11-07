@@ -97,28 +97,33 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Primeiro</th>
-                    <th scope="col">Último</th>
-                    <th scope="col">Nickname</th>
+                    <th scope="col">Tipo Despesa</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Código SAP. Funcionário</th>
+                    <th scope="col">Nome Funcionário</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Centro Custo/Peo/oi</th>
+                    <th scope="col">Conta Contábil</th>
+                    <th scope="col">Valor (BRL) IT</th>
+                    <th scope="col">Texto (Número do Cartão)</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                <tr ng-repeat="exp in exps">
+                    <td>{{ ConvertPessoal(exp.pessoal) }}</td>
+                    <td>{{ exp.id }}</td>
+                    <td>{{ exp.cod_sap }}</td>
+                    <td>{{ exp.name }}</td>
+                    <td>{{ exp.company }}</td>
+                    <td>{{ exp.location }}</td>
+                    <td>{{ exp.cc }}</td>
+                    <td>{{ exp.ccontabil }}</td>
+                    <td>{{ exp.valor }}</td>
+                    <td>{{ exp.num_card }}</td>
+                    <td>{{ ConvertStatus(exp.status) }}</td>
                 </tr>
-                <tr>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
         </table>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
@@ -133,6 +138,7 @@
     <script src="oitavo-controller.js"></script>
     <script src="nono-controller.js"></script>
     <script src="decimo-controller.js"></script>
+    <script src="decimoprimeiro-controller.js"></script>
 </body>
 
 </html>
