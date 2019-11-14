@@ -128,18 +128,31 @@
     </div>
     <div ng-controller="DecimoSegundoController">
         <table class="table">
-          <tr>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Age</th>
-          </tr>
-          <tr ng-repeat="friend in friends | orderBy:'-age'">
-            <td>{{friend.name}}</td>
-            <td>{{friend.phone}}</td>
-            <td>{{friend.age}}</td>
-          </tr>
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Age</th>
+            </tr>
+            <tr ng-repeat="friend in friends | orderBy:'-age'">
+                <td>{{friend.name}}</td>
+                <td>{{friend.phone}}</td>
+                <td>{{friend.age}}</td>
+            </tr>
         </table>
-      </div>
+    </div>
+    <div ng-controller="DecimoTerceiroController">
+            <table class="table">
+                <div ng-repeat="data in newarray | orderBy : 'newdate'">
+                    <div>{{ data.newdate | date : format :'dd/MM/yyyy' }}</div>
+                </div>
+            </table>
+    </div>
+    <div ng-controller="DecimoQuartoController">
+        <!-- FOR '-joinDate' THE PREDICATE IS SET USING '-' (HYPHEN) KEY FOR DESCENDING ORDER. -->
+        <div ng-repeat="emps in empArray | orderBy : '-joinDate'">
+            <div> {{ emps.joinDate | date : 'dd/MM/yyyy' }} : {{ emps.values.name }} </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="primeiro-controller.js"></script>
@@ -154,6 +167,8 @@
     <script src="decimo-controller.js"></script>
     <script src="decimoprimeiro-controller.js"></script>
     <script src="decimosegundo-controller.js"></script>
+    <script src="decimoterceiro-controller.js"></script>
+    <script src="decimoquarto-controller.js"></script>
 </body>
 
 </html>
