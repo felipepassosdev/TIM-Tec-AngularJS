@@ -71,7 +71,7 @@
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="Seu email" name="email" ng-model="email" ng-readyonly="!iniciado"
                             ng-class="{'is-invalid': valido}">
-                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                        <!-- <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                             ninguém.</small>
                         <small id="emailHelp" class="form-text text-muted">{ mensagem }</small>
                     </div>
@@ -82,7 +82,7 @@
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-primary" ng-click="submeterLogin()" ng-disabled="!iniciado"
                         ng-minlength="9">Enviar</button>
                 </form>
@@ -153,6 +153,10 @@
             <div> {{ emps.joinDate | date : 'dd/MM/yyyy' }} : {{ emps.values.name }} </div>
         </div>
     </div>
+    <div ng-controller="DecimoQuintoController">
+        <h1>{{ valor | currency: 'R$' }}</h1>
+        <input ng-model="valor">
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="primeiro-controller.js"></script>
@@ -169,6 +173,7 @@
     <script src="decimosegundo-controller.js"></script>
     <script src="decimoterceiro-controller.js"></script>
     <script src="decimoquarto-controller.js"></script>
+    <script src="decimoquinto-controller.js"></script>
 </body>
 
 </html>
