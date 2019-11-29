@@ -83,8 +83,8 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary" ng-click="submeterLogin()" ng-disabled="!iniciado"
-                        ng-minlength="9">Enviar</button>
+                        <button type="submit" class="btn btn-primary" ng-click="submeterLogin()" ng-disabled="!iniciado"
+                            ng-minlength="9">Enviar</button>
                 </form>
             </div>
             <div class="offset-md-3"></div>
@@ -141,11 +141,11 @@
         </table>
     </div>
     <div ng-controller="DecimoTerceiroController">
-            <table class="table">
-                <div ng-repeat="data in newarray | orderBy : 'newdate'">
-                    <div>{{ data.newdate | date : format :'dd/MM/yyyy' }}</div>
-                </div>
-            </table>
+        <table class="table">
+            <div ng-repeat="data in newarray | orderBy : 'newdate'">
+                <div>{{ data.newdate | date : format :'dd/MM/yyyy' }}</div>
+            </div>
+        </table>
     </div>
     <div ng-controller="DecimoQuartoController">
         <!-- FOR '-joinDate' THE PREDICATE IS SET USING '-' (HYPHEN) KEY FOR DESCENDING ORDER. -->
@@ -154,8 +154,12 @@
         </div>
     </div>
     <div ng-controller="DecimoQuintoController">
-        <h1>{{ valor | currency: 'R$' }}</h1>
+        <h1>Preço: {{ valor | currency: 'R$' }}</h1>
         <input ng-model="valor">
+    </div>
+    <div ng-controller="DecimoSextoController">
+        <h1>Data: {{ dataHoje }}</h1>
+        <input ng-model="data">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
@@ -174,6 +178,7 @@
     <script src="decimoterceiro-controller.js"></script>
     <script src="decimoquarto-controller.js"></script>
     <script src="decimoquinto-controller.js"></script>
+    <script src="decimosexto-controller.js"></script>
 </body>
 
 </html>
