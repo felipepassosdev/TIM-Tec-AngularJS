@@ -158,7 +158,7 @@
         <input ng-model="valor">
     </div>
     <div ng-controller="DecimoSextoController">
-        <h1>Data: {{ dataHoje }}</h1>
+        <h1>Data: {{ dataHoje | date: 'dd/MM/yyyy' }}</h1>
         <input ng-model="data">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
