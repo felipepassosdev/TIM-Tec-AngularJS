@@ -23,21 +23,27 @@
     <div ng-controller="PrimeiroController">
         <h1>Olá, {{ nome }} </h1>
     </div>
+    <hr>
     <div ng-controller="SegundoController">
         <h2>Horário: {{ hora }}</h2>
     </div>
+    <hr>
     <div ng-controller="TerceiroController">
         <h2 ng-show="show"> Show </h2>
     </div>
+    <hr>
     <div ng-controller="QuartoController">
         <h2 ng-hide="hide"> Hide </h2>
     </div>
+    <hr>
     <div ng-controller="QuintoController">
         <h1 ng-if="if"> IF </h1>
     </div>
+    <hr>
     <div ng-controller="SextoController">
         <button class="btn btn-danger" ng-click="clicar()"> Clica ai</button>
     </div>
+    <hr>
     <ul ng-controller="SetimoController">
         <li ng-repeat="aluno in alunos">
             {{ aluno }}
@@ -159,8 +165,17 @@
     </div>
     <div ng-controller="DecimoSextoController">
         <h1>Data: {{ dataHoje | date: 'dd/MM/yyyy' }}</h1>
-        <input ng-model="data">
     </div>
+    <div ng-controller="filter">
+        <div ng-repeat="caboco in rapaziada | filter: filtro">
+            <div>
+                {{ caboco }}
+            </div>
+        </div>
+        <h1>Filtrar por nome</h1>
+        <input type="text" ng-model="filtro">
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="primeiro-controller.js"></script>
@@ -179,6 +194,7 @@
     <script src="decimoquarto-controller.js"></script>
     <script src="decimoquinto-controller.js"></script>
     <script src="decimosexto-controller.js"></script>
+    <script src="filter.js"></script>
 </body>
 
 </html>
