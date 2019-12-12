@@ -20,14 +20,5 @@ angular.module('aplicacao').controller('orderby', function ($scope, $filter) {
         $scope.alunos = $filter('orderBy')($scope.alunos, 'idade', $scope.ordenadoPorIdade)
     }
 
-    $scope.submeterLogin = function() {
-        if($scope.form_1.$valid){
-            novo_aluno = {}
-            novo_aluno['nome'] = $scope.nome_aluno
-            novo_aluno['idade'] = parseInt($scope.idade_aluno)
-            $scope.usuarios.push(novo_aluno)
-        }else {
-            alert('NÃO VALIDO')
-        }
-    }
+   
 })
